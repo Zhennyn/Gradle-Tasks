@@ -1,0 +1,17 @@
+def MyGroup = "My Group"
+task myFirst task {
+    group "MyGroup"
+    description "this is only a test"
+    doFirst {
+         println "doFirst: Hello myFirstTask"
+    }
+   doLast {
+     println "doLast: Hello myFirstTask"
+   }
+}
+
+task mySecondTask ( group: "MyGroup"){
+    doLast {
+        println "doFirst: mySecondTask"
+    }
+}
